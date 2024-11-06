@@ -1,6 +1,6 @@
 {
   "name": "date-spoofer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Spoofing dates for browser & node",
   "type": "module",
   "main": "dist/index.cjs",
