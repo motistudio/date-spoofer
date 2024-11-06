@@ -1,54 +1,21 @@
 {
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "jest/globals": true
-  },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    "requireConfigFile": false,
-    "ecmaVersion": 8
-  },
-  "plugins": [
-    "jsx-a11y",
-    "import",
-    "jest"
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "parser": "@babel/eslint-parser",
-  "extends": ["standard"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
   "rules": {
-    "strict": 0,
-    "babel/semi": 0,
-    "linebreak-style": 0,
-    "object-curly-spacing": ["error", "never"],
-    "indent": ["error", 2, {
-      "ignoredNodes": ["TemplateLiteral"]
-    }],
-    "template-curly-spacing": "off",
-    "no-shadow": 0,
-    "prefer-arrow-callback": 0,
-    "arrow-body-style": 0,
-    "quote-props": [0, "as-needed"],
-    "dot-notation": 0,
-    "curly": 2,
+    "semi": ["error", "never"],
     "no-multi-spaces": 2,
-    "prefer-const": 2,
-    "prefer-template": 0,
-    "no-nested-ternary": 0,
-    "arrow-parens": 0,
-    "object-curly-newline": 0,
-    "import/prefer-default-export": 0,
-    "max-len": 0,
+    "no-multiple-empty-lines": 2,
+    "no-trailing-spaces": 2,
+    "prefer-spread": 0,
     "no-prototype-builtins": 0,
-    "no-param-reassign": 0,
-    "no-plusplus": 0,
-    "func-names": 0,
-    "jsx-quotes": [2, "prefer-single"],
-    "no-console": ["error", {"allow": ["debug", "info", "warn", "error"]}],
-    "standard/no-callback-literal": 0
-  }
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/no-explicit-any": 0
+  },
+  "ignorePatterns": ["dist"]
 }
